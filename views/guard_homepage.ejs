@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+
+    <title>Automated Vehicle Gate Pass System with e-Monitoring Parking Space</title>
+</head>
+
+<body>
+    <div>
+        <div class="nav nav-tabs navigatorGuard">
+            <div class="row w-100">
+                <div class="col-6">
+                    <p class="h2" id="guardName">JOSHUA GONZALEZ</p>
+                    <p class="h6">GUARD ON DUTY</p>
+                </div>
+                <div class="col">
+                    <div class="d-inline-flex headerButton">
+                        <button type="button" class="btn btn-dark mr-2" id="reportViolationButton"
+                            onclick="reportViolation()"> REPORT VIOLATION </button>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="#">PROFILE</a>
+                                <a class="dropdown-item" href="#">LOGOUT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container1">
+            <div class="column">
+                <div class="button">
+                    <div>
+                        <h3 class="mt-3 ml-4">PARKING SLOTS</h3>
+                    </div>
+
+                    <div class="guardParkingSlots mt-3">
+                        <div class="card mt-3 ml-4 border border-primary" id="vehicleSlots">
+                            <div class="text-center">
+                                <h2 class="card-title">7b</h2>
+                                <h3 class="">5/25</h3>
+                                <p>VEHICLES</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <div class="" id="event">
+                        <div class="card mt-5 ml-4 border border-primary">
+                            <div class="guardStatistics">
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="labelStat">USERS</label>
+                                        <p class="stat1" id="numberLoggedIn">70/350</p>
+                                        <label class="labelStat1">LOGGED IN</label>
+                                    </div>
+                                    <div class="col-5">
+                                        <label class="labelStat">PARKING SLOTS</label>
+                                        <p class="stat1" id="numberParkingSlots">65/70</p>
+                                        <label class="labelStat1">PARKED USER</label>
+                                    </div>
+                                    <div class="col">
+                                        <label class="labelStat">VISITORS REGISTERED</label>
+                                        <p class="stat1" id="numberVisitorRegistered">10/50</p>
+                                        <label class="labelStat1">LOGGED IN VISITORS</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div>
+                                    <p>TODAYS EVENT</p>
+                                    <p class="eventTitle">INTRAMURALS 2K22</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="button rowspan">
+                    <div class="" id="Map">
+                        <div class="d-inline-flex">
+                            <img src="photos/BukSUMap.jpg" id="BukSUMap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="secondContainer ">
+            <div class="tab">
+                <div id="userLogs">
+                    <h3 class="logs ml-5 pt-3">USER LOGS <span id="time"></span></h3>
+                </div>
+                <div class="date ml-5">
+                    <select class="form-control mb-2" id="Month" placeholder="month">
+                        <option></option>
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                    </select>
+                    <select class="form-control mb-2" id="Date" placeholder="Date">
+                        <option></option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                    <select class="form-control mb-2" id="Year" placeholder="Year">
+                        <option></option>
+                        <option>2018</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                    </select>
+                </div><br>
+            </div>
+
+            <div class="wholeSSS">
+                <div class="SSS ml-5 pt-4">
+                    <div class="input-group" id="search">
+                        <input type="search" class="form-control border-right-0" placeholder="Search"
+                            aria-label="Search" aria-describedby="search-addon" />
+                        <div class="input-group-prepend">
+                            <span class="input-group-text border-left-0" id="searchIcon"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg></span>
+                        </div>
+                    </div>
+
+                    <select class="form-control mb-4" id="sort" placeholder="">
+                        <option>Sort</option>
+                        <option>Logged In</option>
+                        <option>Logged Out</option>
+                    </select>
+
+                    <select class="form-control mb-4" id="show" placeholder="">
+                        <option>Show</option>
+                        <option>Employees</option>
+                        <option>Students</option>
+                        <option>Visitors</option>
+                    </select>
+
+                    <div class="downloadButton">
+                        <button type="button" class="btn btn-success" id="download"> Download </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="thirdContainer">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">NAME</th>
+                        <th scope="col">CATEGORY</th>
+                        <th scope="col">LOGIN TIME</th>
+                        <th scope="col">LOGIN DATE</th>
+                        <th scope="col">LOGOUT TIME</th>
+                        <th scope="col">LOGOUT DATE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="clickableName" onclick="popUserInfo()">Sheryl Kate Monserrat</td>
+                        <td>Student</td>
+                        <td>7:00 AM</td>
+                        <td>4-9-2021</td>
+                        <td>5:00 PM</td>
+                        <td>4-9-2021</td>
+                    </tr>
+                    <tr>
+                        <td>Nathalie Butic</td>
+                        <td>Student</td>
+                        <td>7:00 AM</td>
+                        <td>4-9-2021</td>
+                        <td>7:00 PM</td>
+                        <td>4-9-2021</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="userInfoContainer rounded" id="userInfoContainer">
+            <div class="Info">
+                <p class="closeButton" onclick="closeButton()">&times;</p><br>
+
+                <div class="userInfoName">
+                    <p class="h1" id="UserInfoLastname">MONSERRAT</p>
+                    <p class="h3" id="UserInfoFirstname">SHERYL KATE PESASICO</p>
+                </div>
+
+                <div class="personalInfo">
+                    <div>
+                        <label class="labels">USER ID</label>
+                        <p id="userID">1801102480</p>
+                    </div>
+
+                    <div>
+                        <label class="labels">CATEGORY</label>
+                        <p id="category">STUDENT</p>
+                    </div>
+
+                    <div>
+                        <label class="labels">CONTACT NO.</label>
+                        <p id="contactNo">09972802630</p>
+                    </div>
+                    <br>
+                </div>
+
+                <div class="plate">
+                    <p id="plateNo">ABC 123</p>
+                    <p id="cardBarcode">951102145</p>
+                </div>
+
+                <div class="vehicleInfo">
+                    <div>
+                        <label class="labels">MODEL</label>
+                        <p id="model">TOYOTA FORTUNER</p>
+                    </div>
+                    <div>
+                        <label class="labels">TYPE</label>
+                        <p id="type">VEHICLE</p>
+                    </div>
+                    <div>
+                        <label class="labels">COLOR</label>
+                        <p id="color">WHITE</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="searchManualModal text-center rounded border border-info" id="">
+            <div class="">
+                <div class="header">
+                    <p class="h4" id="">LOG IN USER</p>
+                    <hr>
+                </div>
+                <div class="">
+                    <p class="h3" id="">MONSERRAT SHERYL KATE</p>
+                    <p> WITH VEHICLE PLATE NUMBER</p>
+                    <p class="h5">ABC 123</p>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-success" id="" onclick=""> CONFIRM </button>
+                    <button type="button" class="btn btn-danger" id="" onclick=""> CANCEL </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loggedInModal rounded border border-info" id="">
+            <div class="loggedIn">
+                <div class="modal-header">
+                    <p class="h4 text-center" id="">LOGGED IN</p>
+                </div>
+                <div class="d-inline-flex">
+                    <div>
+                        <label>FULL NAME</label>
+                        <p class="h3" id="">SHERYL KATE MONSERRAT </p>
+                    </div>
+                    <div class="ml-5">
+                        <label>PLATE NUMBER</label>
+                        <p class="h3">ABC 123</p>
+                    </div>
+                </div><br>
+                <div class="d-inline-flex loggedInline1">
+                    <div>
+                        <label>CATEGORY</label>
+                        <p class="h5">VISITOR</p>
+                    </div>
+                    <div class="ml-5">
+                        <label>VIOLATION COUNT</label>
+                        <p class="text-center h5">2</p>
+                    </div>
+                    <div class="ml-5">
+                        <label>TIME STAMP</label>
+                        <p class="text-center h5">12:51 5/21/21</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-center mt-2">VIOLATION: ILLEGAL PARKING</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reportViolationModal" id="reportViolationModal">
+            <div class="reportViolation" id="">
+                <div class="modal-header">
+                    <p class="h4" id="">REPORT VIOLATION</p>
+                </div>
+                <div class="mb-3">
+                    <label>ENTER PLATE NUMBER</label>
+                    <input type="text" class="form-control" placeholder="">
+                    <label>VIOLATION SPECIFICATION</label>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-success" id="" onclick="reportViolationSubmit()"> SUBMIT
+                    </button>
+                    <button type="button" class="btn btn-danger" id="" onclick="reportViolationCancel()"> CANCEL
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

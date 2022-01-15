@@ -1,0 +1,151 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+    <form class="needs-validation p-4" method="POST" id="updateUserVehicle" required>
+        <input type="hidden" value="<%= users._id %>" name="id" required>
+        <p class="addUserHeader">VEHICLES</p>
+        <div class="mb-4">
+            <div class="d-inline-flex w-100 ml-1">
+                <div class="form-group col-sm-3">
+                    <label class="font-weight-bold">PLATE NUMBER</label>
+                    <input type="text" name="plateNo" value=" <%= users.plateNo %>" class="form-control" id="plateNo"
+                        required>
+                </div>
+
+                <div class="col-sm-3">
+                    <label class="font-weight-bold">VEHICLE REGISTRATION NO.</label>
+                    <input type="text" name="vehicleRegistrationNo" value=" <%= users.vehicleRegistrationNo %>"
+                        class="form-control" id="vehicleRegistrationNo" required>
+                </div>
+
+                <div class="col-sm-3">
+                    <label class="font-weight-bold">EXPIRY DATE</label>
+                    <div class="form-row">
+                        <div class="form-group col-sm-4">
+                            <select class="form-control" name="vehicleExpiryMonth" value="" id="select"
+                                placeholder="month" required>
+                                <option></option>
+                                <option value="Jan." <%=users.vehicleExpiryMonth=='Jan.' ? 'selected' : '' %>>Jan.
+                                </option>
+                                <option value="Feb." <%=users.vehicleExpiryMonth=='Feb.' ? 'selected' : '' %>>Feb.
+                                </option>
+                                <option value="Mar." <%=users.vehicleExpiryMonth=='Mar.' ? 'selected' : '' %>>Mar.
+                                </option>
+                                <option value="Apr." <%=users.vehicleExpiryMonth=='Apr.' ? 'selected' : '' %>>Apr.
+                                </option>
+                                <option value="May" <%=users.vehicleExpiryMonth=='May' ? 'selected' : '' %>>May
+                                </option>
+                                <option value="Jun." <%=users.vehicleExpiryMonth=='Jun.' ? 'selected' : '' %>>Jun.
+                                </option>
+                                <option value="Jul." <%=users.vehicleExpiryMonth=='Jul.' ? 'selected' : '' %>>Jul.
+                                </option>
+                                <option value="Aug." <%=users.vehicleExpiryMonth=='Aug.' ? 'selected' : '' %>>Aug.
+                                </option>
+                                <option value="Sep." <%=users.vehicleExpiryMonth=='Sep.' ? 'selected' : '' %>>Sep.
+                                </option>
+                                <option value="Oct." <%=users.vehicleExpiryMonth=='Oct.' ? 'selected' : '' %>>Oct.
+                                </option>
+                                <option value="Nov." <%=users.vehicleExpiryMonth=='Nov.' ? 'selected' : '' %>>Nov.
+                                </option>
+                                <option value="Dec." <%=users.vehicleExpiryMonth=='Dec.' ? 'selected' : '' %>>Dec.
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <select class="form-control" name="vehicleExpiryDate" value="" id="select"
+                                placeholder="Date" required>
+                                <option></option>
+                                <option value="01" <%=users.vehicleExpiryDate=='01' ? 'selected' : '' %>>01</option>
+                                <option value="02" <%=users.vehicleExpiryDate=='02' ? 'selected' : '' %>>02</option>
+                                <option value="03" <%=users.vehicleExpiryDate=='03' ? 'selected' : '' %>>03</option>
+                                <option value="04" <%=users.vehicleExpiryDate=='04' ? 'selected' : '' %>>04</option>
+                                <option value="05" <%=users.vehicleExpiryDate=='05' ? 'selected' : '' %>>05</option>
+                                <option value="06" <%=users.vehicleExpiryDate=='06' ? 'selected' : '' %>>06</option>
+                                <option value="07" <%=users.vehicleExpiryDate=='07' ? 'selected' : '' %>>07</option>
+                                <option value="08" <%=users.vehicleExpiryDate=='08' ? 'selected' : '' %>>08</option>
+                                <option value="09" <%=users.vehicleExpiryDate=='09' ? 'selected' : '' %>>09</option>
+                                <option value="10" <%=users.vehicleExpiryDate=='10' ? 'selected' : '' %>>10</option>
+                                <option value="11" <%=users.vehicleExpiryDate=='11' ? 'selected' : '' %>>11</option>
+                                <option value="12" <%=users.vehicleExpiryDate=='12' ? 'selected' : '' %>>12</option>
+                                <option value="13" <%=users.vehicleExpiryDate=='13' ? 'selected' : '' %>>13</option>
+                                <option value="14" <%=users.vehicleExpiryDate=='14' ? 'selected' : '' %>>14</option>
+                                <option value="15" <%=users.vehicleExpiryDate=='15' ? 'selected' : '' %>>15</option>
+                                <option value="16" <%=users.vehicleExpiryDate=='16' ? 'selected' : '' %>>16</option>
+                                <option value="17" <%=users.vehicleExpiryDate=='17' ? 'selected' : '' %>>17</option>
+                                <option value="18" <%=users.vehicleExpiryDate=='18' ? 'selected' : '' %>>18</option>
+                                <option value="19" <%=users.vehicleExpiryDate=='19' ? 'selected' : '' %>>19</option>
+                                <option value="20" <%=users.vehicleExpiryDate=='20' ? 'selected' : '' %>>20</option>
+                                <option value="21" <%=users.vehicleExpiryDate=='21' ? 'selected' : '' %>>21</option>
+                                <option value="22" <%=users.vehicleExpiryDate=='22' ? 'selected' : '' %>>22</option>
+                                <option value="23" <%=users.vehicleExpiryDate=='23' ? 'selected' : '' %>>23</option>
+                                <option value="24" <%=users.vehicleExpiryDate=='24' ? 'selected' : '' %>>24</option>
+                                <option value="25" <%=users.vehicleExpiryDate=='25' ? 'selected' : '' %>>25</option>
+                                <option value="26" <%=users.vehicleExpiryDate=='26' ? 'selected' : '' %>>26</option>
+                                <option value="27" <%=users.vehicleExpiryDate=='27' ? 'selected' : '' %>>27</option>
+                                <option value="28" <%=users.vehicleExpiryDate=='28' ? 'selected' : '' %>>28</option>
+                                <option value="29" <%=users.vehicleExpiryDate=='29' ? 'selected' : '' %>>29</option>
+                                <option value="30" <%=users.vehicleExpiryDate=='30' ? 'selected' : '' %>>30</option>
+                                <option value="31" <%=users.vehicleExpiryDate=='31' ? 'selected' : '' %>>31</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <select class="form-control" name="vehicleExpiryYear" value="" id="select"
+                                placeholder="Year" required>
+                                <option></option>
+                                <option value="2021" <%=users.vehicleExpiryYear=='2021' ? 'selected' : '' %>>2021
+                                </option>
+                                <option value="2022" <%=users.vehicleExpiryYear=='2022' ? 'selected' : '' %>>2022
+                                </option>
+                                <option value="2023" <%=users.vehicleExpiryYear=='2023' ? 'selected' : '' %>>2023
+                                </option>
+                                <option value="2024" <%=users.vehicleExpiryYear=='2024' ? 'selected' : '' %>>2024
+                                </option>
+                                <option value="2024" <%=users.vehicleExpiryYear=='2025' ? 'selected' : '' %>>2025
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label class="font-weight-bold">DOCUMENTS</label><br>
+                    <button type="button" class="btn btn-default btn-sm " name="vehicleRegistrationDocu"></button><i
+                        class="fas fa-paperclip"></i></button>
+                    <button type="button" class="btn btn-default btn-sm "></button><i
+                        class="fas fa-paperclip"></i></button>
+                </div>
+            </div>
+
+            <div class="d-inline-flex w-100 ml-1 mb-3">
+                <div class="col-sm-3">
+                    <label class="font-weight-bold">TYPE</label>
+                    <input type="text" name="vehicleType" value="<%= users.vehicleType %>" class="form-control"
+                        id="vehicleType" required>
+                </div>
+                <div class="col-sm-3">
+                    <label class="font-weight-bold">MODEL</label>
+                    <input type="text" name="vehicleModel" value="<%= users.vehicleModel %>" class="form-control"
+                        id="vehicleModel" required>
+                </div>
+                <div class="col-sm-3">
+                    <label class="font-weight-bold">COLOR</label>
+                    <input type="text" name="vehicleColor" value="<%= users.vehicleColor %>" class="form-control"
+                        id="vehicleColor" required>
+                </div>
+                <div class="col-sm-3">
+                    <label class="font-weight-bold">RFID No.</label><br>
+                    <input type="text" name="RFID" value="<%= users.RFID %>" class="form-control" id="RFID" required>
+                </div>
+            </div>
+        </div>
+        <div class=" mt-3 text-center">
+            <button type="submit" class="btn btn-success"> SUBMIT </button>
+            <button type="button" class="btn btn-danger" id="cancelEventButton"
+                onclick="javascript:window.history.back();"> BACK </button>
+        </div>
+    </form>
+
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

@@ -1,0 +1,82 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<div class="wholeContainer">
+
+    <div class="firstContainer">
+
+        <div class="statistics">
+            <div class="firstRow">
+                <label class="labelUser">USERS</label>
+                <p class="numbers" id="numberLoggedIn">70/350</p>
+                <label  class="label2">LOGGED IN</label>
+            </div>
+            <div class="secondRow">
+                <label  class="labelParking">PARKING SLOTS</label>
+                <p class="numbers" id="numberParkingSlots">65/70</p>
+                <label class="label2">PARKED USER</label>
+            </div>
+            <div class="thirdRow">
+                <label class="labelVisitor">VISITORS REGISTERED</label>
+                <p class="numbers" id="numberVisitorRegistered">10/50</p>
+                <label  class="label2">LOGGED IN VISITORS</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="userSecondContainer ">
+        
+        <div class="wholeSSS">
+            <div class="SSS mb-1">
+                    <div class="col-md-11" >
+                        <p class="userlogHeader" id="userLogs">USERS</p>
+                    </div>
+
+                    <div class="col-md-5"> 
+                        <a class="btn btn-primary " id="" href="/add-user">ADD</a>
+                        <button type="button" class="btn btn-success" id=""> Download </button>
+                    </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="thirdContainer">
+        <table class="table table-bordered" id="userTable">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">USER ID</th>
+                    <th scope="col">NAME</th>
+                    <th scope="col">PLATE NO.</th>
+                    <th scope="col">VEHICLE REGISTRATION NO.</th>
+                    <th scope="col">CATEGORY</th>
+                    <th scope="col">STATUS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i = 0; i < users.length; i++) { %>
+                <tr id="userList">
+                    
+                    <td><%= i + 1 %></td>
+                    <td><%= users[i].userID %></td>
+                    <td id="clickableName"> <a class="" href="/user-Records?id=<%= users[i]._id %>">
+                        <%= users[i].firstname %> <%= users[i].middlename %> <%= users[i].surname %>
+                        </a>
+                    </td>
+                    <td><%= users[i].plateNo %></td>
+                    <td><%= users[i].vehicleRegistrationNo %></td>
+                    <td><%= users[i].category %></td>
+                    <td><%= users[i].idNo %></td>
+                </tr>
+                <% } %> 
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

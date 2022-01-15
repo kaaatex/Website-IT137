@@ -1,0 +1,120 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+    <form action="/profile" class="container-fluid">
+        <input type="hidden" value="<%= user._id %>" name="id" required>
+        <div class="d-inline-flex w-100">
+            <div class="col-md-3">
+                <div class="profile-header"><br>
+                    <img src="/img/avatar.png" class="rounded-circle" alt="sheryl kate" id="profilePicture">
+                    <p class="text-uppercase" id="surnameHeader"><%= user.surname %></p>
+                    <p class="text-uppercase" id="firstnameHeader"><%= user.firstname %></p>
+                    <hr>
+                </div>
+
+                <div class="navigatorProfile">
+                    <a onclick="enterProfile()">PROFILE</a>
+                    <a onclick="enterActiveVehicle()">CHANGE PASSWORD & USERNAME</a>
+  
+        
+                </div>
+
+                <hr><br>
+                <footer class="container-fluid">
+                    <label class="buksu-details">BUKSU CONTACT DETAILS</label>
+                </footer>
+            </div>
+
+            <div class="col-md-9">
+                <div id="profile" class="">
+                    <p class="profileTopHeader text-center">PROFILE</p>
+                    
+                    <hr>
+                    <p class="profileTopHeader">PERSONAL INFORMATION</p>
+
+                    <div class="form-group col-sm-10 text-right">
+                        <a href="/update-personal-infos?id=<%= user._id%>" class="btn btn-primary btn-sm">
+                            EDIT
+                        </a>
+                       
+                    </div>
+
+                    <div class="d-inline-flex w-100">
+                        <div class="form-group col-sm-3">
+                            <label for="firstname" class="font-weight-bold">FIRSTNAME</label>
+                            <p class="form-control-plaintext text-capitalize" id="" value=""><%= user.firstname %></p>
+                        </div>
+
+                        <div class="form-group col-sm-3">
+                            <label for="middlename" class="font-weight-bold">MIDDLENAME</label>
+                            <p class="form-control-plaintext text-capitalize" id="" value=""><%= user.middlename %></p>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="surname" class="font-weight-bold">SURNAME</label>
+                            <p class="form-control-plaintext text-capitalize" id="" value=""><%= user.surname %></p>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="emailAddress" class="font-weight-bold">USERNAME</label>
+                            <p class="form-control-plaintext" id="" value=""><%= user.username %></p>  
+                        </div>
+                    </div>
+
+                    <div class="d-inline-flex w-100">
+                        <div class="form-group col-md-3">
+                            <label for="contactno" class="font-weight-bold">CONTACT NUMBER</label>
+                            <p class="form-control-plaintext" id="" value=""><%= user.contactNo %></p>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="emailAddress" class="font-weight-bold">EMAIL ADDRESS</label>
+                            <p class="form-control-plaintext" id="" value=""><%= user.email %></p>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="address" class="font-weight-bold" >ADDRESS</label>
+                            <p class="form-control-plaintext text-capitalize" id="" value=""><%= user.address %></p>
+                        </div>
+                      
+                    </div>
+
+                    <div class="d-inline-flex w-100">
+                        
+                    </div>
+
+                </div>
+
+                <div class="activeVehicle" id="activeVehicle">
+                    <br>
+                    <p class="profileTopHeader text-center">USERNAME & PASSWORD</p>
+                    <hr>
+                    <div class="form-group col-sm-8 text-right">
+                        <button type="button" class="btn btn-primary btn-sm " id="profileButton">EDIT</button>
+                    </div>
+    
+                    <div class="d-inline-flex w-100">
+                        <div class="form-group col-sm-3">
+                            <label for="vehicleRegistarationNo" class="font-weight-bold">USERNAME</label>
+                            <input type="text" readonly class="form-control-plaintext" id="username"
+                                value="<%= user.username %>">
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="vehicleExpiryDate" class="font-weight-bold">PASSWORD</label>
+                            <input type="text" readonly class="form-control-plaintext" id="password"
+                                value="<%= user.password %>">
+                        </div>
+                    </div>
+    
+                    <hr>
+                </div>
+
+            </div>
+
+            
+        </div>
+
+
+    </form>
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

@@ -1,0 +1,113 @@
+<!-- include header -->
+<%- include('include/_header') %>
+    <!-- /include header -->
+
+    <form class="needs-validation p-4" method="POST" id="updateUserLicense" required>
+        <input type="hidden" value="<%= users._id %>" name="id" required>
+        <div class="d-flex">
+            <h4>LICENSE DETAILS</h4>
+          </div>
+
+          <div class="d-inline-flex w-100 ml-1">
+            <div class="form-group col-sm-3">
+              <label for="DriversLicenseNo" class="font-weight-bold">DRIVERS LICENSE NUMBER</label>
+              <input type="text" class="form-control" value="<%= users.driversLicenseNo %>" required>
+            </div>
+            <div class="form-group col-sm-3">
+              <label for="DriversLicenseExpiry" class="font-weight-bold">DRIVERS LICENSE EXPIRY</label>
+              <div class="form-row">
+                <div class="for-group col-sm-3">
+                  <select class="form-control mb-2" name="licenseExpiryMonth" placeholder="month"
+                    id="select" required>
+                    <option></option>
+                    <option value="Jan." <%=users.licenseExpiryMonth=='Jan.' ? 'selected' : '' %>>Jan.</option>
+                    <option value="Feb." <%=users.licenseExpiryMonth=='Feb.' ? 'selected' : '' %>>Feb.</option>
+                    <option value="Mar." <%=users.licenseExpiryMonth=='Mar.' ? 'selected' : '' %>>Mar.</option>
+                    <option value="Apr." <%=users.licenseExpiryMonth=='Apr.' ? 'selected' : '' %>>Apr.</option>
+                    <option value="May" <%=users.licenseExpiryMonth=='May' ? 'selected' : '' %>>May </option>
+                    <option value="Jun." <%=users.licenseExpiryMonth=='Jun.' ? 'selected' : '' %>>Jun.</option>
+                    <option value="Jul." <%=users.licenseExpiryMonth=='Jul.' ? 'selected' : '' %>>Jul.</option>
+                    <option value="Aug." <%=users.licenseExpiryMonth=='Aug.' ? 'selected' : '' %>>Aug.</option>
+                    <option value="Sep." <%=users.licenseExpiryMonth=='Sep.' ? 'selected' : '' %>>Sep.</option>
+                    <option value="Oct." <%=users.licenseExpiryMonth=='Oct.' ? 'selected' : '' %>>Oct.</option>
+                    <option value="Nov." <%=users.licenseExpiryMonth=='Nov.' ? 'selected' : '' %>>Nov.</option>
+                    <option value="Dec." <%=users.licenseExpiryMonth=='Dec.' ? 'selected' : '' %>>Dec.</option>
+                  </select>
+                </div>
+                <div class="form-group col-sm-3">
+                  <select class="form-control mb-2" name="licenseExpiryDate" placeholder="Date"
+                    id="select" required>
+                    <option></option>
+                    <option value="01" <%=users.licenseExpiryDate=='01' ? 'selected' : '' %>>01</option>
+                    <option value="02" <%=users.licenseExpiryDate=='02' ? 'selected' : '' %>>02</option>
+                    <option value="03" <%=users.licenseExpiryDate=='03' ? 'selected' : '' %>>03</option>
+                    <option value="04" <%=users.licenseExpiryDate=='04' ? 'selected' : '' %>>04</option>
+                    <option value="05" <%=users.licenseExpiryDate=='05' ? 'selected' : '' %>>05</option>
+                    <option value="06" <%=users.licenseExpiryDate=='06' ? 'selected' : '' %>>06</option>
+                    <option value="07" <%=users.licenseExpiryDate=='07' ? 'selected' : '' %>>07</option>
+                    <option value="08" <%=users.licenseExpiryDate=='08' ? 'selected' : '' %>>08</option>
+                    <option value="09" <%=users.licenseExpiryDate=='09' ? 'selected' : '' %>>09</option>
+                    <option value="10" <%=users.licenseExpiryDate=='10' ? 'selected' : '' %>>10</option>
+                    <option value="11" <%=users.licenseExpiryDate=='11' ? 'selected' : '' %>>11</option>
+                    <option value="12" <%=users.licenseExpiryDate=='12' ? 'selected' : '' %>>12</option>
+                    <option value="13" <%=users.licenseExpiryDate=='13' ? 'selected' : '' %>>13</option>
+                    <option value="14" <%=users.licenseExpiryDate=='14' ? 'selected' : '' %>>14</option>
+                    <option value="15" <%=users.licenseExpiryDate=='15' ? 'selected' : '' %>>15</option>
+                    <option value="16" <%=users.licenseExpiryDate=='16' ? 'selected' : '' %>>16</option>
+                    <option value="17" <%=users.licenseExpiryDate=='17' ? 'selected' : '' %>>17</option>
+                    <option value="18" <%=users.licenseExpiryDate=='18' ? 'selected' : '' %>>18</option>
+                    <option value="19" <%=users.licenseExpiryDate=='19' ? 'selected' : '' %>>19</option>
+                    <option value="20" <%=users.licenseExpiryDate=='20' ? 'selected' : '' %>>20</option>
+                    <option value="21" <%=users.licenseExpiryDate=='21' ? 'selected' : '' %>>21</option>
+                    <option value="22" <%=users.licenseExpiryDate=='22' ? 'selected' : '' %>>22</option>
+                    <option value="23" <%=users.licenseExpiryDate=='23' ? 'selected' : '' %>>23</option>
+                    <option value="24" <%=users.licenseExpiryDate=='24' ? 'selected' : '' %>>24</option>
+                    <option value="25" <%=users.licenseExpiryDate=='25' ? 'selected' : '' %>>25</option>
+                    <option value="26" <%=users.licenseExpiryDate=='26' ? 'selected' : '' %>>26</option>
+                    <option value="27" <%=users.licenseExpiryDate=='27' ? 'selected' : '' %>>27</option>
+                    <option value="28" <%=users.licenseExpiryDate=='28' ? 'selected' : '' %>>28</option>
+                    <option value="29" <%=users.licenseExpiryDate=='29' ? 'selected' : '' %>>29</option>
+                    <option value="30" <%=users.licenseExpiryDate=='30' ? 'selected' : '' %>>30</option>
+                    <option value="31" <%=users.licenseExpiryDate=='31' ? 'selected' : '' %>>31</option>
+                  </select>
+                </div>
+                <div class="form-group col-sm-3">
+                  <select class="form-control mb-2" name="eventStartYear" placeholder="Year"
+                    id="select" required> 
+                    <option></option>
+                    <option value="2021" <%=users.licenseExpiryYear=='2021' ? 'selected' : '' %>>2021</option>
+                    <option value="2022" <%=users.licenseExpiryYear=='2022' ? 'selected' : '' %>>2022</option>
+                    <option value="2023" <%=users.licenseExpiryYear=='2023' ? 'selected' : '' %>>2023</option>
+                    <option value="2024" <%=users.licenseExpiryYear=='2024' ? 'selected' : '' %>>2024</option>
+                    <option value="2025" <%=users.licenseExpiryYear=='2025' ? 'selected' : '' %>>2025</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group col-sm-3">
+              <label for="licenseType" class="font-weight-bold">TYPE</label>
+              <select class="form-control" name="licenseType" value="" id="select" required>
+                <option></option>
+                <option value="Student Permit" <%=users.licenseType=='Student Permit' ? 'selected' : '' %>>Student Permit</option>
+                <option value="Non-Professional" <%=users.licenseType=='Non-Professional' ? 'selected' : '' %>>Non-Professional</option>
+                <option value="Professional" <%=users.licenseType=='Professional' ? 'selected' : '' %>>Professional</option>
+            </select>
+            </div>
+
+            <div class="form-group col-sm-3">
+              <label for="attachedoc" class="font-weight-bold">ATTACHED DOCUMENT</label><br>
+              <button type="button" class="btn btn-default btn-sm "></button><i class="fas fa-paperclip"></i></button>
+              <button type="button" class="btn btn-default btn-sm "></button><i class="fas fa-paperclip"></i></button>
+            </div>
+          </div>
+        <div class=" mt-3 text-center">
+            <button type="submit" class="btn btn-success"> SUBMIT </button>
+            <button type="button" class="btn btn-danger" id="cancelEventButton" onclick="javascript:window.history.back();"> BACK </button>
+        </div>
+    </form>
+
+
+    <!-- include footer -->
+    <%- include('include/_footer') %>
+        <!-- /include footer -->

@@ -1,0 +1,1203 @@
+
+/*Global*/
+input[type="text"] {
+    font-size: 1.2vw;
+}
+
+input[type="search"] {
+    font-size: 1.2vw;
+}
+input[type="password"] {
+    font-size: 1.2vw;
+}
+
+#select {
+    font-size: 1.2vw;
+}
+
+label {
+    font-size: 1.2vw;
+}
+
+.passwordHeader {
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+table {
+    font-size: 1.2vw;
+    line-height: 1.2vw;
+    padding-top: 1.2vw;
+}
+
+th {
+    text-align: center;
+}
+
+/*LOGIN*/
+
+#container {
+    width: 400px;
+    margin-top: 15%;
+    padding: 0px 20px;
+}
+
+#image1 {
+    width: 95%;
+    height: auto;
+   
+}
+
+#save{
+    font-size: 1vw;
+}
+
+#checkbox {
+    margin-top: 6px;
+    background-color: #b9c2c4;
+}
+#checkboxLabel {
+    margin-left: 5px;
+}
+input[type="checkbox"] { /* change "blue" browser chrome to yellow */
+filter: hue-rotate(180deg);
+}
+
+
+#login {
+    background-color: rgb(60, 60, 150);
+    color: white;
+}
+#createAccount {
+    background-color: #7b8a88;
+    color: white;
+}
+.hr-sect {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: rgba(15, 15, 15, 0.35);
+    margin: 8px 0px;
+    font-size: 1vw;
+}
+.hr-sect:before,
+.hr-sect:after {
+    content: "";
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.35);
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0px 8px;
+}
+
+header {
+    background: rgb(60, 60, 150);
+}
+
+footer {
+    color: rgb(60, 60, 150);
+}
+
+/*SIGN UP*/
+#register-account {
+    margin: auto;
+}
+
+#signupBody {
+    background-color: rgb(60, 60, 150);
+    opacity: 1;
+}
+.eye1:hover {
+    fill: #DA4567;
+    cursor: pointer;
+}
+.eye2:hover {
+    fill: #DA4567;
+    cursor: pointer;
+}
+#box {
+    margin: auto;
+    width: 450px;
+    max-width: 450px;
+    height: auto;
+}
+
+
+html, body {
+    min-height: 100%;
+}
+
+
+
+/*-----------------HOME----------------------*/
+
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+p {
+    font-size: 1vw;
+}
+.navigator {
+    width: 100%;
+    position: flex;
+    display: inline-block;
+    z-index: 1;
+    top: 0;
+    background-color: rgb(70, 70, 156);
+}
+
+.navigator a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1% 2%;
+    font-size: 1.2vw;
+}
+.navigator a:hover {
+    background-color: white;
+    color: rgb(70, 70, 156);
+}
+
+.navigator a:link {
+    text-decoration: none;
+}
+
+#logout {
+    margin-left: 55%;
+}
+
+.statistics {
+    width: 90%;
+    background-color: white;
+    padding: 2%;
+    display: inline-flex;
+}
+
+.firstRow {
+    margin-left: 15%;
+}
+.secondRow {
+    margin-left: 15%;
+}
+.thirdRow {
+    margin-left: 15%;
+}
+.labelUser {
+    font-size: 1vw;
+    margin-left: 60%;
+    margin-bottom: 0;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+.labelParking {
+    font-size: 1vw;
+    margin-left: 40%;
+    margin-bottom: 0;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+.labelVisitor {
+    font-size: 1vw;
+    margin-left: 30%;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+.label2 {
+    font-size: 1vw;
+    margin-right: 50%;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+.numbers {
+    padding: 0;
+    margin: 0;
+    display: inline;
+    font-size: 4vw;
+    
+}
+
+.form-control {
+    font-size: 1.2vw;
+}
+
+.tab {
+    width: 30%;
+    background-color: rgb(70, 70, 156);
+    border-top-right-radius: 5%;
+}
+
+#userLogs {
+    margin-left: 3%;
+}
+
+.logs {
+    font-size: 2.2vw;
+    font-weight: 600;
+    line-height: 0.09vw;
+    padding-top: 0.82vw;
+    color: white;
+}
+
+.date {
+    margin-left: 9%;
+    width: 80%;
+    gap: 3%;
+    display: inline-flex;
+}
+
+.wholeSSS {
+    font-size: 1vw;
+    background-color: rgb(70, 70, 156);
+}
+
+.SSS {
+    font-size: 1vw;
+    margin-left: 1%;
+    margin-top: 1%;
+    width: 90%;
+    gap: 2%;
+    display: inline-flex;
+    
+}
+
+#search {
+    width: 500%;
+    font-size: 1.2vw;
+}
+
+.homepageSort {
+    width: 1%;
+}
+
+.homepageShow {
+    width: 1%;
+}
+
+.downloadButton {
+    
+    float: right;
+}
+#download {
+    font-size: 1.2vw;
+}
+
+.thirdContainer {
+    font-size: 1.2vw;
+}
+
+#userInfoContainer {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 55, 56, 0.4);
+   
+}
+
+.Info {
+    width: 50%;
+    height: 50%;
+    background-color: rgb(70, 70, 156);
+    position: relative;
+    margin: 10% auto;
+    color: white;
+}
+
+.personalInfo {
+    width: 100%;
+    display: inline-flex;
+    gap: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.userInfoName {
+    padding: 1%;
+    margin-left: 10%;
+}
+
+.labels {
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+.plate {
+    font-size: 2vw;
+    width: 100%;
+    display: inline-flex;
+    gap: 40%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.vehicleInfo {
+    width: 100%;
+    display: inline-flex;
+    gap: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.closeButton {
+    float: right;
+    font-size: 2vw;
+    margin-right: 2%;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/*----------------EVENT-----------------*/
+
+.mainEventButton {
+    float: right;
+    margin: 1%;
+}
+
+#eventAddButton {
+    margin-top: 1%;
+
+    gap: 3%;
+    font-size: 1.2vw;
+}
+
+#eventHistoryButton {
+    margin-top: 1%;
+    font-size: 1.2vw;
+}
+
+#submitEventButton {
+    font-size: 1.2vw;
+}
+
+#cancelEventButton{
+    font-size: 1.2vw;
+}
+
+.eventList {
+    margin-top: 5%;
+}
+#eventCard {
+    width: 250px;
+}
+
+.eventCardIcons {
+    display: inline-flex;
+    margin-top: 3%;
+    margin-left: 78%;
+    margin-right: 2%;
+    gap: 1%;
+}
+
+.eventEditIcon {
+    width: 100%;
+    color: black;
+    cursor: pointer;
+}
+
+.eventDeleteIcon {
+    width: 100%;
+    color: black;
+    cursor: pointer;
+}
+
+.card-title {
+    font-size: 2vw;
+    font-weight: 500;
+    margin-left: 7%;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+.eventNo {
+    font-size: 1.2vw;
+    margin-left: 7%;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+.eventStart {
+    font-size: 1.2vw;
+    font-weight: 600;
+    margin-left: 23%;
+    margin-right: 25%;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+.eventEnd {
+    font-size: 1.2vw;
+    font-weight: 600;
+    margin-left: 25%;
+    margin-right: 25%;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+.eventTimeDate {
+    margin-left: 7%;
+    margin-right: 7%;
+    display: inline-flex;
+    width: 100%;
+    gap: 8%;
+}
+
+.eventDate {
+    font-size: 1.2vw;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+.eventTime {
+    font-size: 1.2vw;
+    margin-left: 7%;
+    margin-right: 7%;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+.addEventcontainer {
+    width: 50%;
+    background-color: #e9e9e9;
+    margin: 3% auto;
+    padding: 5%;
+}
+
+.addEventTimeContainer{
+    font-size: 1.2vw;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+.column {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.addEventDate {
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+    gap: 3%;
+    display: inline-flex;
+}
+
+.addEventTimeStart {
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+    gap: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.addEventTimeEnd {
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+    gap: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+.addEventHeader {
+    font-size: 2vw;
+    font-weight: 600;
+    text-align: center;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+.eventTitleLabel {
+    font-size: 1.3vw;
+    font-weight: 500;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+.eventTitle {
+    font-size: 1.2vw;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+.eventTimeDateLabel {
+    font-size: 1.3vw;
+    font-weight: 500;
+    margin-top: 2%;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+#confirmPasswordEvent {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 55, 56, 0.4);
+}
+
+.confirmPasswordEvent {
+    width: 30%;
+    background-color: #e9e9e9;
+    position: relative;
+    margin: 15% auto;
+}
+
+#searchHistory {
+    width: 10%;
+}
+
+#activeEvent {
+    margin-left: 2%;
+    font-size: 1.2vw;
+}
+
+.historySA {
+    font-size: 1vw;
+    margin-left: 2.8%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 90%;
+    gap: 2%;
+    display: inline-flex;
+}
+
+.eventHistoryTable {
+    padding: 1% 5% 5% 5%;
+}
+
+/*-----------PARKING SPACE----------------*/
+
+.parkingHeader {
+    font-size: 2.1vw;
+    font-weight: 600;
+}
+#vehicleSlots {
+    width: 200px;
+}
+
+.parkingCardIcons {
+    margin-top: 3%;
+    margin-left: 75%;
+    margin-right: 2%;
+    display: inline-flex;
+    gap: 1%;
+    font-size: 1.2vw;
+}
+
+.parkingSpaceIcon {
+    width: 100%;
+    color: black;
+}
+
+
+.parkingSpaceNo {
+    font-size: 2.1vw;
+    font-weight: 600;
+}
+
+.parkingSpaceType {
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+#BukSUMap {
+    width: 100%;
+}
+
+.addParkingSlotsContainer {
+    width: 40%;
+    background-color: #e9e9e9;
+    position: relative;
+    margin: 5% auto;
+}
+
+.addParkingHeader {
+    font-size: 2vw;
+    font-weight: 600;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+    margin-bottom: 5%;
+}
+
+.addParkingSlotsIcon {
+    float: right;
+    cursor: pointer;
+    color: black;
+    width: 10%;
+}
+
+#confirmPasswordAddParkingSlotModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 55, 56, 0.4);
+}
+.confirmPasswordAddParkingSlot {
+    width: 30%;
+    background-color: #e9e9e9;
+    position: relative;
+    margin: 15% auto;
+}
+
+#removeParkingSlotModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 55, 56, 0.4);
+}
+
+.removeParkingSlot {
+    width: 25%;
+    background-color: #e9e9e9;
+    position: relative;
+    margin: 15% auto;
+}
+
+#confirmPasswordRemoveParkingSlotModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 55, 56, 0.4);
+}
+
+.confirmPasswordRemoveParkingSlot {
+    width: 30%;
+    background-color: #e9e9e9;
+    position: relative;
+    margin: 15% auto;
+}
+
+#updateParkingSlotsModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 55, 56, 0.4);
+}
+
+input[type="radio"] {
+   font-size: 1.2vw;
+}
+
+input[type="color"] {
+    font-size: 1.2vw;
+} 
+
+#submitAddedParkingSpace {
+    font-size: 1.2vw;
+}
+
+#cancelAddedParkingSpace {
+    font-size: 1.2vw;
+}
+
+/*------------REQUEST------------*/
+
+.nav-pills .nav-link:not(.active) {
+    background-color: rgb(70, 70, 156);
+    color:white;
+    font-size: 1.2vw;
+}
+
+.nav-pills .nav-link{
+    background-color: rgb(70, 70, 156);
+    color:white;
+    font-size: 1.2vw;
+}
+
+.navBarRequest .active a,
+.navBarRequest .active a:hover {
+    background-color: red;
+    color: red;
+}
+
+#requestVehicle {
+    padding: 2.5% 5% 2.5% 5%;
+    width: 80%;
+    margin: auto;
+}
+
+#vehicleRenewalReceipt {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 55, 56, 0.4);
+}
+
+.receiptContainer {
+    width: 30%;
+    background-color: #e9e9e9;
+    position: relative;
+    margin: 10% auto;
+}
+
+
+
+.firstlineEvent{
+    padding: 2.5% 5% 2.5% 5%;
+    gap: 15%;
+}
+
+.secondlineEvent {
+    padding: 2.5% 5% 2.5% 5%;
+}
+
+.firstline {
+    gap: 15%;
+}
+
+.firstlineInfo {
+    font-size: 2.2vw;
+    font-weight: 600;
+}
+
+.secondline {
+    gap: 15%;
+}
+
+.secondlineInfo {
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+
+.thirdline {
+    gap: 15%;
+}
+
+.thirdlineInfo {
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+
+#requestEvent{
+    width: 80%;
+    margin: auto;
+}
+
+.secondlineCards3{
+    gap: 1%;
+}
+
+.thirdlineDriver {
+    gap: 10%;
+}
+
+.requestEventTitle {
+    font-size: 2vw;
+    font-weight: 600;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+.requestEventInfo {
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.requestEventType {
+    font-size: 1.4vw;
+}
+
+.requestDriversInfo {
+    font-size: 1.5vw;
+    font-weight: 600;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+#confirmPasswordRequestModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 55, 56, 0.4);
+}
+.confirmPasswordRequest {
+    width: 30%;
+    background-color: #e9e9e9;
+    position: relative;
+    margin: 10% auto;
+}
+
+#submitEvent {
+    font-size: 1.2vw;
+}
+
+#cancelEvent {
+    font-size: 1.2vw;
+}
+/*-----------------------USER--------------------------*/
+#addUserButton {
+    font-size: 1.2vw;
+}
+.userTab {
+    width: 30%;
+    height: auto;
+    background-color: rgb(70, 70, 156);
+    border-top-right-radius: 5%;
+}
+
+.userlogHeader{
+    font-size: 2.3vw;
+    font-weight: 600;
+    line-height: 0vw;
+    margin-top: 1%;
+    color: white;
+}
+
+.addUserHeader {
+    font-size: 2vw;
+    font-weight: 600;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+#addUserButton {
+    font-size: 1.2vw;
+}
+
+br {
+    line-height: 4vh;
+    background-color: rgb(70, 70, 156);
+    width: 30%;
+}
+
+
+
+/*-----------------------PROFILE --------------------------*/
+.profile-header{
+    text-align: center;
+    font-weight: 600;
+}
+
+#surnameHeader {
+    font-size: 2.5vw;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+#firstnameHeader {
+    font-size: 2vw;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+
+.profileTopHeader {
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+#profileButton {
+    font-size: 1.2vw;
+}
+
+.navigatorProfile a{
+    display: block;
+    width:100%;
+    padding:1%;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2vw;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+}
+.navigatorProfile active{
+    margin-right: 100%;
+}
+.navigatorProfile a:hover{
+    background-color: #555;
+}
+
+
+.editProfile{
+    
+ display: none; 
+ position: fixed; 
+ z-index: 1; 
+ left: 0;
+ top: 0;
+ width: 100%; 
+ height: 100%;
+  overflow: auto; 
+ background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+ 
+}
+.editProfile .modal-content{
+    margin-left: 26%;
+    margin-top: 4%;
+
+}
+.editProfile .btn {
+   margin: 0% 27% 0% -10%;
+}
+
+.renewLicenseDetails{
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+   
+}
+.renewLicenseDetails .modal-content{
+    margin-left: 26%;
+    margin-top: 4%;
+    height: auto;
+    width: 50%;
+}
+.renewLicenseDetails .btn{
+    margin: 0% 35% 0% -25%;
+}
+
+
+#enterPasswordConfirm {
+   
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+   
+}
+.enterPasswordConfirm .modal-content{
+    margin-left: 43%;
+    margin-top: 10%;
+}
+
+.enterPasswordConfirm i{
+    margin-left: 80%;
+    cursor: pointer;
+}
+
+.inactiveVehicle{
+    display: none;
+
+}
+.activeVehicle{
+    display: none;
+
+}
+
+#profilePicture {
+    width: 60%;
+    height: 80%;
+    z-index: 0;
+    top: 0%;
+}
+
+.profileReminder {
+    font-size: 1.2vw;
+    line-height: 0.82vw;
+    padding-top: 0.82vw;
+
+}
+
+/*-----------------GUARD DASHBOARD-------------------*/
+
+.navigatorGuard {
+    width: 100%;
+    position: flex;
+    display: inline-block;
+    z-index: 1;
+    top: 0;
+    background-color: rgb(70, 70, 156);
+    padding: .5%;
+}
+
+#navBarButton {
+    gap: 10%;
+}
+
+#reportViolationButton {
+    font-size: 1.2vw;
+}
+
+.searchManualModal {
+    display: none;
+    width: 30%;
+    background-color: rgb(70, 70, 156);
+    color: white;
+    padding: 1%;
+}
+
+.loggedInModal {
+    display: none;
+    width: 40%;
+    background-color: rgb(70, 70, 156);
+    color: white;
+    padding: 1%;
+    
+}
+
+.loggedInline1 {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.reportViolationModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 55, 56, 0.4);
+}
+
+.reportViolation {
+    width: 30%;
+    position: relative;
+    margin: 10% auto;
+    background-color: rgb(70, 70, 156);
+    color: white;
+    padding: 1%;
+    text-align: center;
+}
+
+.container1 {
+    display: inline-flex;
+    width: 100%;
+    z-index: 1;
+   
+}
+  
+.column {
+    flex: 1;
+    display: inline-flex;
+    flex-direction: column;
+}
+  
+.button {
+    flex: 1;
+    color: black;
+}
+
+.button.rowspan {
+    flex: 2;
+}
+
+.guardStatistics {
+    padding: 3%;
+    
+}
+
+.labelStat {
+    font-size: .8vw;
+    margin-left: 55%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+
+.labelStat1{
+    font-size: .8vw;
+    margin-left: 10%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+   
+}
+
+.stat1{
+    text-align: center;
+    font-size: 2.7vw;
+    margin-bottom: 0%;
+    margin-top: 0%;
+   
+}
+
+.eventTitle {
+    font-size: 3vw;
+    font-weight: bold;
+    margin-top: 0%;
+}
+
+.headerButton {
+    float: right;
+}
+
+/**/
+
+#licenseHistoryModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 55, 56, 0.4);
+}
+
+.licenseHistory {
+    width: 30%;
+    position: relative;
+    margin: 10% auto;
+    background-color: rgb(70, 70, 156);
+    color: white;
+    padding: 1%;
+    text-align: center;
+}
+
+#deactivateModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 55, 56, 0.4);
+}
+
+.deactivateModal {
+    width: 30%;
+    position: relative;
+    margin: 10% auto;
+    background-color: rgb(70, 70, 156);
+    color: white;
+    padding: 1%;
+    text-align: center;
+}
+
+/*INPUTS*/

@@ -1,0 +1,216 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<div>
+    <form method="POST" class="needs-validation" id="updateEvent">
+        <div class=" addEventcontainer">
+            <p class="addEventHeader">ADD EVENT</p>
+            <input type="hidden" value="<%=events._id %>" name="id" required>
+
+            <p class="eventTitleLabel">EVENT TITLE</p>
+            <input type="text" name="eventTitle" class="eventTitle form-control" id="eventTitleInputBox" value="<%=events.eventTitle %>" required>
+
+            <p class="eventTimeDateLabel">EVENT TIME & DATE</p>
+
+            <div class="addEventTimeContainer">
+                <div class="form d-inline-flex">
+                    <div class="text-center">
+                        <p class="text-center">START ON:</p>
+                        <div class="col-md-11 d-inline-flex addEventDate">
+                            <select class="form-control mb-2" name="eventStartMonth" placeholder="month" id="select" required> 
+                                <option></option>
+                                <option value="Jan." <%= events.eventStartMonth =='Jan.' ? 'selected' : '' %>>Jan.</option>
+                                <option value="Feb." <%= events.eventStartMonth =='Feb.' ? 'selected' : '' %>>Feb.</option>
+                                <option value="Mar." <%= events.eventStartMonth =='Mar.' ? 'selected' : '' %>>Mar.</option>
+                                <option value="Apr." <%= events.eventStartMonth =='Apr.' ? 'selected' : '' %>>Apr.</option>
+                                <option value="May" <%= events.eventStartMonth =='May' ? 'selected' : '' %>>May </option>
+                                <option value="Jun." <%= events.eventStartMonth =='Jun.' ? 'selected' : '' %>>Jun.</option>
+                                <option value="Jul." <%= events.eventStartMonth =='Jul.' ? 'selected' : '' %>>Jul.</option>
+                                <option value="Aug." <%= events.eventStartMonth =='Aug.' ? 'selected' : '' %>>Aug.</option>
+                                <option value="Sep." <%= events.eventStartMonth =='Sep.' ? 'selected' : '' %>>Sep.</option>
+                                <option value="Oct." <%= events.eventStartMonth =='Oct.' ? 'selected' : '' %>>Oct.</option>
+                                <option value="Nov." <%= events.eventStartMonth =='Nov.' ? 'selected' : '' %>>Nov.</option>
+                                <option value="Dec." <%= events.eventStartMonth =='Dec.' ? 'selected' : '' %>>Dec.</option>
+                            </select>
+                            <select class="form-control mb-2" name="eventStartDate" placeholder="Date" id="select" required>
+                                <option></option>
+                                <option value="01" <%= events.eventStartDate =='01' ? 'selected' : '' %>>01</option>
+                                <option value="02" <%= events.eventStartDate =='02' ? 'selected' : '' %>>02</option>
+                                <option value="03" <%= events.eventStartDate =='03' ? 'selected' : '' %>>03</option>
+                                <option value="04" <%= events.eventStartDate =='04' ? 'selected' : '' %>>04</option>
+                                <option value="05" <%= events.eventStartDate =='05' ? 'selected' : '' %>>05</option>
+                                <option value="06" <%= events.eventStartDate =='06' ? 'selected' : '' %>>06</option>
+                                <option value="07" <%= events.eventStartDate =='07' ? 'selected' : '' %>>07</option>
+                                <option value="08" <%= events.eventStartDate =='08' ? 'selected' : '' %>>08</option>
+                                <option value="09" <%= events.eventStartDate =='09' ? 'selected' : '' %>>09</option>
+                                <option value="10" <%= events.eventStartDate =='10' ? 'selected' : '' %>>10</option>
+                                <option value="11" <%= events.eventStartDate =='11' ? 'selected' : '' %>>11</option>
+                                <option value="12" <%= events.eventStartDate =='12' ? 'selected' : '' %>>12</option>
+                                <option value="13" <%= events.eventStartDate =='13' ? 'selected' : '' %>>13</option>
+                                <option value="14" <%= events.eventStartDate =='14' ? 'selected' : '' %>>14</option>
+                                <option value="15" <%= events.eventStartDate =='15' ? 'selected' : '' %>>15</option>
+                                <option value="16" <%= events.eventStartDate =='16' ? 'selected' : '' %>>16</option>
+                                <option value="17" <%= events.eventStartDate =='17' ? 'selected' : '' %>>17</option>
+                                <option value="18" <%= events.eventStartDate =='18' ? 'selected' : '' %>>18</option>
+                                <option value="19" <%= events.eventStartDate =='19' ? 'selected' : '' %>>19</option>
+                                <option value="20" <%= events.eventStartDate =='20' ? 'selected' : '' %>>20</option>
+                                <option value="21" <%= events.eventStartDate =='21' ? 'selected' : '' %>>21</option>
+                                <option value="22" <%= events.eventStartDate =='22' ? 'selected' : '' %>>22</option>
+                                <option value="23" <%= events.eventStartDate =='23' ? 'selected' : '' %>>23</option>
+                                <option value="24" <%= events.eventStartDate =='24' ? 'selected' : '' %>>24</option>
+                                <option value="25" <%= events.eventStartDate =='25' ? 'selected' : '' %>>25</option>
+                                <option value="26" <%= events.eventStartDate =='26' ? 'selected' : '' %>>26</option>
+                                <option value="27" <%= events.eventStartDate =='27' ? 'selected' : '' %>>27</option>
+                                <option value="28" <%= events.eventStartDate =='28' ? 'selected' : '' %>>28</option>
+                                <option value="29" <%= events.eventStartDate =='29' ? 'selected' : '' %>>29</option>
+                                <option value="30" <%= events.eventStartDate =='30' ? 'selected' : '' %>>30</option>
+                                <option value="31" <%= events.eventStartDate =='31' ? 'selected' : '' %>>31</option>
+                            </select>
+                            <select class="form-control mb-2" name="eventStartYear" placeholder="Year" id="select" required>
+                                <option></option>
+                                <option value="2021" <%= events.eventStartYear =='2021' ? 'selected' : '' %>>2021</option>
+                                <option value="2022" <%= events.eventStartYear =='2022' ? 'selected' : '' %>>2022</option>
+                                <option value="2023" <%= events.eventStartYear =='2023' ? 'selected' : '' %>>2023</option>
+                                <option value="2024" <%= events.eventStartYear =='2024' ? 'selected' : '' %>>2024</option>
+                                <option value="2025" <%= events.eventStartYear =='2025' ? 'selected' : '' %>>2025</option>
+                            </select>
+                        </div><br>
+
+                            <p class="text-center">START TIME:</p>
+                            <div class="col-md-11 d-inline-flex addEventDate">
+                                <select class="form-control mb-2" name="eventStartHour" class="form-control" id="select" required>
+                                    <option></option>
+                                    <option value="01" <%= events.eventStartHour =='01' ? 'selected' : '' %>>01</option>
+                                    <option value="02" <%= events.eventStartHour =='02' ? 'selected' : '' %>>02</option>
+                                    <option value="03" <%= events.eventStartHour =='03' ? 'selected' : '' %>>03</option>
+                                    <option value="04" <%= events.eventStartHour =='04' ? 'selected' : '' %>>04</option>
+                                    <option value="05" <%= events.eventStartHour =='05' ? 'selected' : '' %>>05</option>
+                                    <option value="06" <%= events.eventStartHour =='06' ? 'selected' : '' %>>06</option>
+                                    <option value="07" <%= events.eventStartHour =='07' ? 'selected' : '' %>>07</option>
+                                    <option value="08" <%= events.eventStartHour =='08' ? 'selected' : '' %>>08</option>
+                                    <option value="09" <%= events.eventStartHour =='09' ? 'selected' : '' %>>09</option>
+                                    <option value="10" <%= events.eventStartHour =='10' ? 'selected' : '' %>>10</option>
+                                    <option value="11" <%= events.eventStartHour =='11' ? 'selected' : '' %>>11</option>
+                                    <option value="12" <%= events.eventStartHour =='12' ? 'selected' : '' %>>12</option>
+                                    
+                                </select>
+                                <select class="form-control mb-2" name="eventStartMinute" class="form-control" id="select" required>
+                                    <option></option>
+                                    <option value="00" <%= events.eventStartMinute =='00' ? 'selected' : '' %>>00</option>
+                                </select>
+                                <select class="form-control mb-2"  name="eventStartAM_PM" placeholder="" id="select" required>
+                                    <option></option>
+                                    <option value="AM" <%= events.eventStartAM_PM =='AM' ? 'selected' : '' %>>AM</option>
+                                    <option value="PM" <%= events.eventStartAM_PM =='PM' ? 'selected' : '' %>>PM</option>
+                                </select>
+                            </div><br>
+                    </div>
+    
+                    <div class="text-center">
+                        <p class="text-center">ENDS ON:</p>
+                        <div class="col-md-11 d-inline-flex addEventDate">
+                            <select class="form-control mb-2" name="eventEndMonth" placeholder="month" id="select" required>
+                                <option></option>
+                                <option value="Jan." <%= events.eventEndMonth =='Jan.' ? 'selected' : '' %>>Jan.</option>
+                                <option value="Feb." <%= events.eventEndMonth =='Feb.' ? 'selected' : '' %>>Feb.</option>
+                                <option value="Mar." <%= events.eventEndMonth =='Mar.' ? 'selected' : '' %>>Mar.</option>
+                                <option value="Apr." <%= events.eventEndMonth =='Apr.' ? 'selected' : '' %>>Apr.</option>
+                                <option value="May" <%= events.eventEndMonth =='May' ? 'selected' : '' %>>May </option>
+                                <option value="Jun." <%= events.eventEndMonth =='Jun.' ? 'selected' : '' %>>Jun.</option>
+                                <option value="Jul." <%= events.eventEndMonth =='Jul.' ? 'selected' : '' %>>Jul.</option>
+                                <option value="Aug." <%= events.eventEndMonth =='Aug.' ? 'selected' : '' %>>Aug.</option>
+                                <option value="Sep." <%= events.eventEndMonth =='Sep.' ? 'selected' : '' %>>Sep.</option>
+                                <option value="Oct." <%= events.eventEndMonth =='Oct.' ? 'selected' : '' %>>Oct.</option>
+                                <option value="Nov." <%= events.eventEndMonth =='Nov.' ? 'selected' : '' %>>Nov.</option>
+                                <option value="Dec." <%= events.eventEndMonth =='Dec.' ? 'selected' : '' %>>Dec.</option>
+                            </select>
+                            <select class="form-control mb-2" name="eventEndDate" placeholder="Date" id="select" required>
+                                <option></option>
+                                <option value="01" <%= events.eventEndDate =='01' ? 'selected' : '' %>>01</option>
+                                <option value="02" <%= events.eventEndDate =='02' ? 'selected' : '' %>>02</option>
+                                <option value="03" <%= events.eventEndDate =='03' ? 'selected' : '' %>>03</option>
+                                <option value="04" <%= events.eventEndDate =='04' ? 'selected' : '' %>>04</option>
+                                <option value="05" <%= events.eventEndDate =='05' ? 'selected' : '' %>>05</option>
+                                <option value="06" <%= events.eventEndDate =='06' ? 'selected' : '' %>>06</option>
+                                <option value="07" <%= events.eventEndDate =='07' ? 'selected' : '' %>>07</option>
+                                <option value="08" <%= events.eventEndDate =='08' ? 'selected' : '' %>>08</option>
+                                <option value="09" <%= events.eventEndDate =='09' ? 'selected' : '' %>>09</option>
+                                <option value="10" <%= events.eventEndDate =='10' ? 'selected' : '' %>>10</option>
+                                <option value="11" <%= events.eventEndDate =='11' ? 'selected' : '' %>>11</option>
+                                <option value="12" <%= events.eventEndDate =='12' ? 'selected' : '' %>>12</option>
+                                <option value="13" <%= events.eventEndDate =='13' ? 'selected' : '' %>>13</option>
+                                <option value="14" <%= events.eventEndDate =='14' ? 'selected' : '' %>>14</option>
+                                <option value="15" <%= events.eventEndDate =='15' ? 'selected' : '' %>>15</option>
+                                <option value="16" <%= events.eventEndDate =='16' ? 'selected' : '' %>>16</option>
+                                <option value="17" <%= events.eventEndDate =='17' ? 'selected' : '' %>>17</option>
+                                <option value="18" <%= events.eventEndDate =='18' ? 'selected' : '' %>>18</option>
+                                <option value="19" <%= events.eventEndDate =='19' ? 'selected' : '' %>>19</option>
+                                <option value="20" <%= events.eventEndDate =='20' ? 'selected' : '' %>>20</option>
+                                <option value="21" <%= events.eventEndDate =='21' ? 'selected' : '' %>>21</option>
+                                <option value="22" <%= events.eventEndDate =='22' ? 'selected' : '' %>>22</option>
+                                <option value="23" <%= events.eventEndDate =='23' ? 'selected' : '' %>>23</option>
+                                <option value="24" <%= events.eventEndDate =='24' ? 'selected' : '' %>>24</option>
+                                <option value="25" <%= events.eventEndDate =='25' ? 'selected' : '' %>>25</option>
+                                <option value="26" <%= events.eventEndDate =='26' ? 'selected' : '' %>>26</option>
+                                <option value="27" <%= events.eventEndDate =='27' ? 'selected' : '' %>>27</option>
+                                <option value="28" <%= events.eventEndDate =='28' ? 'selected' : '' %>>28</option>
+                                <option value="29" <%= events.eventEndDate =='29' ? 'selected' : '' %>>29</option>
+                                <option value="30" <%= events.eventEndDate =='30' ? 'selected' : '' %>>30</option>
+                                <option value="31" <%= events.eventEndDate =='31' ? 'selected' : '' %>>31</option>
+
+                            </select>
+                            <select class="form-control mb-2" name="eventEndYear" placeholder="Year" id="select" required>
+                                <option></option>
+                                <option value="2021" <%= events.eventEndYear =='2021' ? 'selected' : '' %>>2021</option>
+                                <option value="2022" <%= events.eventEndYear =='2022' ? 'selected' : '' %>>2022</option>
+                                <option value="2023" <%= events.eventEndYear =='2023' ? 'selected' : '' %>>2023</option>
+                                <option value="2024" <%= events.eventEndYear =='2024' ? 'selected' : '' %>>2024</option>
+                                <option value="2025" <%= events.eventEndYear =='2025' ? 'selected' : '' %>>2025</option>
+                            </select>
+                        </div><br>
+
+                        <p class="text-center">END TIME:</p>
+                        <div class="col-md-11 d-inline-flex addEventDate">
+                                <select class="form-control mb-2" name="eventEndHour" class="form-control" id="select" required>
+                                    <option></option>
+                                    <option value="01" <%= events.eventEndHour =='01' ? 'selected' : '' %>>01</option>
+                                    <option value="02" <%= events.eventEndHour =='02' ? 'selected' : '' %>>02</option>
+                                    <option value="03" <%= events.eventEndHour =='03' ? 'selected' : '' %>>03</option>
+                                    <option value="04" <%= events.eventEndHour =='04' ? 'selected' : '' %>>04</option>
+                                    <option value="05" <%= events.eventEndHour =='05' ? 'selected' : '' %>>05</option>
+                                    <option value="06" <%= events.eventEndHour =='06' ? 'selected' : '' %>>06</option>
+                                    <option value="07" <%= events.eventEndHour =='07' ? 'selected' : '' %>>07</option>
+                                    <option value="08" <%= events.eventEndHour =='08' ? 'selected' : '' %>>08</option>
+                                    <option value="09" <%= events.eventEndHour =='09' ? 'selected' : '' %>>09</option>
+                                    <option value="10" <%= events.eventEndHour =='10' ? 'selected' : '' %>>10</option>
+                                    <option value="11" <%= events.eventEndHour =='11' ? 'selected' : '' %>>11</option>
+                                    <option value="12" <%= events.eventEndHour =='12' ? 'selected' : '' %>>12</option>
+                                </select>
+                                <select class="form-control mb-2" name="eventEndMinute" class="form-control" id="select" required>
+                                    <option></option>
+                                    <option value="00" <%= events.eventEndMinute =='00' ? 'selected' : '' %>>00</option>
+                                </select>
+                                <select class="form-control mb-2"  name="eventEndAM_PM" placeholder="" id="select" required>
+                                    <option></option>
+                                    <option value="AM" <%= events.eventEndAM_PM =='AM' ? 'selected' : '' %>>AM</option>
+                                    <option value="PM" <%= events.eventEndAM_PM =='PM' ? 'selected' : '' %>>PM</option>
+                                </select>
+                        </div><br>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="addEventButton mt-3 text-center">
+                <button type="submit" class="btn btn-success"> SUBMIT </button>
+                <button type="button" class="btn btn-danger" id="cancelEventButton" onclick="javascript:window.history.back();"> BACK </button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
